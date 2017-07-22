@@ -12,7 +12,7 @@ class App extends Component {
 					<Text style={styles.text}>Welcome to React</Text>
 				</View>
 				<Text style={styles.intro}>
-					To get started, edit <code>src/App.js</code> and save to reload.
+					To get started, edit <Text style={styles.code}>src/App.js</Text> and save to reload.
 				</Text>
 			</View>
 		);
@@ -42,7 +42,11 @@ const styles = StyleSheet.create({
 	intro: {
 		fontSize: "large",
 		textAlign: "center"
-	}
+  },
+  code:{
+    color:'blue',
+    fontSize:'small'
+  }
 });
 
 // .App {
