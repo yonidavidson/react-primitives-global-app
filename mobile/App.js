@@ -3,33 +3,33 @@ import logo from "./logo.svg";
 import { View, Text, Image, StyleSheet, Animated } from "react-primitives";
 
 class App extends Component {
-	componentWillMount() {
-		this._animatedValue = new Animated.Value(0);
-	}
+	// componentWillMount() {
+	// 	this._animatedValue = new Animated.Value(0);
+	// }
 
-	componentDidMount() {
-		Animated.timing(this._animatedValue, {
-			toValue: 100,
-			duration: 3000
-		}).start();
-	}
+	// componentDidMount() {
+	// 	Animated.timing(this._animatedValue, {
+	// 		toValue: 100,
+	// 		duration: 3000
+	// 	}).start();
+	// }
 
 	render() {
-		var interpolatedRotateAnimation = this._animatedValue.interpolate({
-			inputRange: [0, 100],
-			outputRange: ["0deg", "360deg"]
-		});
+		// var interpolatedRotateAnimation = this._animatedValue.interpolate({
+		// 	inputRange: [0, 100],
+		// 	outputRange: ["0deg", "360deg"]
+		// });
 		return (
 			<View style={styles.app}>
 				<View style={styles.header}>
-					<Animated.Image
+					{/* <Animated.Image
 						source={logo}
 						style={[
 							styles.logo,
 							{ transform: [{ rotate: interpolatedRotateAnimation }] }
 						]}
 						alt="logo"
-					/>
+					/> */}
 					<Text style={styles.text}>Welcome to React</Text>
 				</View>
 				<Text style={styles.intro}>
@@ -51,8 +51,8 @@ const styles = StyleSheet.create({
 	},
 	header: {
 		backgroundColor: "#222",
-		height: "150px",
-		padding: "20px",
+		height: "150",
+		padding: "20",
 		display: "flex",
 		alignItems: "center"
 	},
@@ -61,11 +61,11 @@ const styles = StyleSheet.create({
 		height: 50
 	},
 	intro: {
-		fontSize: "large",
+		fontSize: 20,
 		textAlign: "center"
 	},
 	code: {
 		color: "blue",
-		fontSize: "small"
+		fontSize: 10
 	}
 });
